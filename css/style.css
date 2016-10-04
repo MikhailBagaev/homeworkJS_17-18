@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 89%;
+    margin: 0 auto;
+    position: relative;    
+}
+
+/*CAROUSEL*/
+h1 {
+    color: #aaa;
+    margin-top: 20px;
+    width: 300px;
+    display: inline-block;
+    font-family: sans-serif;
+}
+.jcarousel {
+    position: relative;
+    overflow: hidden;    
+    background: #ccc;
+    border-radius: 2px;   
+    padding: 100px 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.jcarousel ul li {
+    width: 288px;
+    box-sizing: border-box;
+}
+.jcarousel ul li  {
+    text-align: center;
+    background: #000;
+    color: #fff;    
+    font-family: sans-serif;
+    border: 1px solid #fff;       
+}
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;    
+}
+.jcarousel-prev,
+.jcarousel-next {
+    position: absolute;
+    top: 337px;
+    border: 2px solid #fff;    
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    opacity: 0.6;
+    text-decoration: none;
+    color: #fff;    
+    text-align: center;    
+    display: block;
+    box-sizing: border-box; 
+    padding-top: 15px;
+    text-transform: uppercase;     
+}
+.jcarousel-prev {
+    left: -2%;
+}
+.jcarousel-next {
+    right: -2%;
+}
+.jcarousel-prev:hover,
+.jcarousel-next:hover {
+    opacity: 1;
+} 
+.jcarousel ul {
+    width: 20000em;
+    position: relative;    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel li {    
+    float: left;
+}
+.jcarousel-pagination {     
+    position: absolute;
+    top: 478px; 
+    left: 39.8%;    
+}
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;    
+} 
+.jcarousel-pagination a:not(:first-child) {
+    margin-left: 10px;
+}
+a.active {
+    background: #ccc;
+}
+/*HORIZONTAL MENU with changing color items*/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+nav {
+    margin-top: 40px;
+    position: relative;
+    z-index: 100;
+    background: #ccc;  
+    border-radius: 2px;
+}
+.main-menu li {    
+    float: left;
+    list-style: none;    
+    width: 100px;   
+    position: relative;         
+}  
+.main-menu li a {
+    text-decoration: none;
+    display: block;
+    width: 100%; 
+    padding: 10px 0;   
+    text-align: center;
+    font-family: sans-serif;
+    /*color: #fff;*/
+}
+.sub-menu {
+    display: none;
+    position: absolute;    
+}
+.sub-menu li {
+    width: 150px;    
+} 
+.level-2,
+.level-3 {
+    left: 150px;
+    top: 0;
+}
+nav li a {
+    color: #fff; 
+}
+nav li a:hover {
+    background: #fff;
+    color: #aaa;    
+}
+.hover {
+    background: #fff;
+    color: #aaa;
+    transition: 0.5s;
+    border-bottom: 1px solid #ccc;    
+}
+.drop > a:after {
+    position : absolute;
+    content : '';
+    top : 14px;
+    right : 6px;
+    width : 0;
+    height : 0;
+    border-style : solid;
+    border-width : 8px 4px 0 4px;
+    border-color : #fff transparent transparent transparent;
+}
+.sub-menu .drop > a:after {
+    position : absolute;
+    content : '';
+    top : 14px;
+    right : 18px;
+    width : 0;
+    height : 0;
+    border-style : solid;
+    border-width : 8px 4px 0 4px;
+    border-color : #ccc transparent transparent transparent;
+}
+.sub-menu li a:hover {
+    background: #ccc;
+    color: #fff;
+}
+
+/*styles for select*/
+
+.select {   
+  float: right; 
+  position: relative;
+  display: block;
+  margin-top: 20px;  
+  width: 100%;
+  max-width: 325px;
+  color: #cccccc;
+  vertical-align: middle;
+  text-align: left;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+}
+.select .placeholder {
+  position: relative;
+  display: block;
+  background-color: #393d41;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+.select .placeholder:hover {
+  background: #34383c;
+  color: #fff;
+}
+.select .placeholder:after {
+  position : absolute;
+  content : '';
+  right: 1em;
+  top: 40%;
+  width : 0;
+  height : 0;
+  border-style : solid;
+  border-width : 8px 4px 0 4px;
+  border-color : #fff transparent transparent transparent;
+}
+.select.is-open ul {
+  display: block;
+  z-index: 200;
+}
+.select.select--white .placeholder {
+  background: #ccc;
+  color: #fff;
+}
+.select.select--white .placeholder:hover {
+  background: #ddd;
+  color: #fff;
+  font-style: bold;  
+}
+.select ul {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  z-index: 100;
+  max-height: 120px;
+}
+.select ul li {
+  display: block;
+  text-align: left;
+  padding: 0.8em 1em 0.8em 1em;
+  color: #999;
+  cursor: pointer;
+}
+.select ul li:hover {
+  background: #4ebbf0;
+  color: #fff;
+}
+/*styles for checkbox on jquery*/
+p {
+    background: #ccc;
+    width: 150px;
+    margin: 20px 0 20px;
+    font-family: sans-serif;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 2px; 
+}
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/checkbox.png');
+}
+
+.niceCheck input {
+    display: none;
+}
+label {    
+    font-family: sans-serif;
+    color: #aaa;
+}
+.area label {
+    margin-left: 30px;
+}
+.area {
+    float: left;
+    margin-right: 20px;
+}
+.zone {
+    float: left;
+}
+/*styles for checkbox on css*/
+input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label {
+    cursor: pointer;
+}
+
+.zone label:before {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox.png);
+    position: relative;
+    top: 3px;
+    /*margin-left: -10px;*/
+    margin-right: 10px;
+}
+input[type=checkbox]:checked + label:before {
+    background-position: 0 -17px;
+}
+label:hover:before {
+    background-position: 0 -34px;
+}
+.zone input[type="checkbox"] {
+    margin-right: 10px;
+}
+.zone p {
+    padding: 5px 25px;
+    border-radius: 2px; 
+}
+footer {
+    background: #ccc;
+    height: 60px;  
+    clear: both;
+    margin-top: 230px;
+    padding-top: 15px; 
+    border-radius: 2px; 
+}
+p.designed {
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    width: 300px;
+    margin: 15px auto 0;
+} 
+
+
+
+
+
+
+
+
+
